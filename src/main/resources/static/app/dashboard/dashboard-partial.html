@@ -1,0 +1,31 @@
+<div id="dashboard">
+
+    <div>
+        Filters :
+        <div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <table class="table-bordered">
+        <tr class= "row">
+            <th class="col-md-3">Currency ID</th>
+            <th class="col-md-3">Currency Name</th>
+            <th class="col-md-3">Currency Code</th>
+            <th class="col-md-3">Cut off</th>
+
+        </tr>
+        <tr class="row" ng-repeat="currencyCutoff in dashboardCtrl.cutOffData | orderBy : ['cutoffHour','cutOffMin']">
+
+            <td class="col-md-3"><span>{{currencyCutoff.currencyId}}</span>  </td>
+            <td class="col-md-3"><span>{{currencyCutoff.name}}</span>  </td>
+            <td class="col-md-3"><span>{{currencyCutoff.currencyCode}}</span>  </td>
+            <td class="col-md-3"><span>{{currencyCutoff.cutoffHour}} : {{currencyCutoff.cutOffMin}}</span></td>
+        </tr>
+    </table>
+</div>
